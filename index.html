@@ -1,1 +1,20 @@
-Websocket Example
+<html>
+    <head></head>
+    <body></body>
+    
+    <script>
+        let ws;
+
+        // different protocol for websocket with htttp or with http
+        // wss - websocketsecure for https; port 80
+        // ws - websocket for http; port 443
+        const proto = window.location.protocol === 'https:' ? 'wss' : 'ws';
+
+        // host return the domain name, the websocket server
+        ws = new WebSocket(`${proto}://${window.location.host}`);
+
+        // log any event/ onmessage is short hand for onMessage events
+        ws.onmessage = (event) => {console.log(event.data)};
+    </script>
+
+</html>
