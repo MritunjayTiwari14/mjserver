@@ -11,9 +11,9 @@ app.get('/', function(req, res) {
 // connect express with the server
 server.on("request", app);
 
-// start the server on port 3001
-server.listen(3001, function() {
-	console.log("server started on port 3001");
+// start the server on port 3000
+server.listen(3000, function() {
+	console.log("server started on port 3000");
 })
 
 
